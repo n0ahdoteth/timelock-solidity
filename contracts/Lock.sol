@@ -11,7 +11,8 @@ contract Lock {
 
     function deposit() external payable {
         balances[msg.sender] += msg.value;
-        lockTime[msg.sender] += block.timestamp + 5 minutes;
+        
+        lockTime[msg.sender] += block.timestamp + 1 years;
     }
 
     function withdraw() external payable{
